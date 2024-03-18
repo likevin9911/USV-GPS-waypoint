@@ -1,0 +1,17 @@
+<launch>
+
+    <include file="$(find vrx_tasks)/launch/missioncontrol.launch">
+        <arg name="world_name" value="dock"/>
+    </include>
+
+
+
+  <!-- <group ns="wamv">
+    <node pkg="vrx_tasks" name="dockmaster" type="dockmaster.py" output="screen">
+      <remap from="/odom" to="odom"/>
+  </node>
+
+    <node pkg="vrx_vision" name="placard_classifier" type="classify_placard_server.py" output="screen"/>
+  </group> -->
+
+</launch>
