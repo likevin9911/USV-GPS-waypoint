@@ -25,7 +25,7 @@
 
 
 <world xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="ocean_waves" params="gain:=0.1 period:=5
+  <xacro:macro name="ocean_waves" params="gain:=0.1 period:=0.1
                      direction_x:=1.0 direction_y:=0.0
                      angle:=0.4 scale:=1.5">
   <model name='ocean_waves'>
@@ -53,7 +53,7 @@
       <visual name="ocean_waves_visual">
         <plugin name="ocean_waves_visual_plugin" filename="libWavefieldVisualPlugin.so">
           <enableRtt>true</enableRtt>
-          <rttNoise>0.1</rttNoise>
+          <rttNoise>0.1</rttNoise> <!-- for Camera -->
           <refractOpacity>0.2</refractOpacity>
           <reflectOpacity>0.2</reflectOpacity>
           <wave>

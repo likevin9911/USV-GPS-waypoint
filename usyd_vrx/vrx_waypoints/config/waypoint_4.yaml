@@ -1,0 +1,9 @@
+waypoints:
+  - nav_type: 1
+    pose:
+      position:
+        x: 156.8
+        y: 110.128
+speed: 5.0
+
+

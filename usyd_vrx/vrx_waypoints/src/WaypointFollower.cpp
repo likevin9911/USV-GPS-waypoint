@@ -46,7 +46,7 @@ void WaypointFollower::setupWaypointFollower()
 
   waypoint_list_.clear();
   num_wps_      =  0;
-  wp_index_     = -1;
+  wp_index_     = 2;
   vessel_yaw_   =  0;
   wp_next_      = {0, 0};
   wp_prev_      = {0, 0};

@@ -34,6 +34,7 @@
 
   <!-- Do we load the VRX sensor suite? -->
   <arg name="vrx_sensors_enabled" default="true" />
+  
 
   <!-- Start Gazebo with the world file -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
