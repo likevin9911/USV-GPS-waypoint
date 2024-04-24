@@ -3,9 +3,9 @@
   <xacro:macro name="usv_wind_gazebo"
                params="**wind_objs
                          direction:=270
-                         mean_vel:=0
+                         mean_vel:=0.1
                          var_gain:=0
-                         var_time:=20
+                         var_time:=1000
                          seed:=''
                          ros_update_rate:=10
                          topic_wind_speed:=/vrx/debug/wind/speed

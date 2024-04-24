@@ -1,0 +1,26 @@
+
+<launch>
+    <arg name="node_start_delay" default="5.0"/>
+
+    <!-- Source and launch the Gazebo simulation without the GUI -->
+    <include file="$(find usv_gazebo)/launch/usv_bringup.launch" >
+        <arg name="gui" value="false"/>
+    </include>
+
+    <!-- Launch RViz after a delay with sourcing the ROS workspace -->
+    <include file="$(find usv_gazebo)/launch/rviz.launch" />
+
+    <!-- Launch the navigation stack with sourcing the ROS workspace -->
+    <include file="$(find usv_gazebo)/launch/usv_navstack.launch" />
+
+    <!-- Launch control components with sourcing the ROS workspace -->
+    <include file="$(find usv_control)/launch/control.launch"/>
+
+    <!-- Run a Python script with sourcing the ROS workspace 
+    <node name="waypoint_follower" pkg="usv_navigation" type="follow_set_of_waypoints.py" args="" output="screen" cwd="node" launch-prefix="bash -c 'source ~/vrx_ws/devel/setup.bash; $0 $@'"/>-->
+
+    <!-- Execute a bash script to record topics with sourcing the ROS workspace 
+    <node name="record_rostopics" pkg="rosbash" type="rosrun" args="bash /home/nope/rosbag/record_rostopics.sh" output="screen" launch-prefix="bash -c 'source /home/nope/vrx_ws/devel/setup.bash; $0 $@'"/>-->
+</launch>
+
+

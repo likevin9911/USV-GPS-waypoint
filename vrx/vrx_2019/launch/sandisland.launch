@@ -39,7 +39,7 @@
   <arg name="gps_enabled"          default="false" />
   <arg name="imu_enabled"          default="false" />
   <arg name="lidar_enabled"        default="false" />
-  <arg name="ground_truth_enabled" default="true" />
+  <arg name="ground_truth_enabled" default="false" />
 
   <!-- Start Gazebo with the world file -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">

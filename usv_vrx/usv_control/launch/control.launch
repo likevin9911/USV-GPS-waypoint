@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="thrust_config" default="T"/>
+
+  <include file="$(find usv_control)/launch/course_controller.launch">
+        <arg name="thrust_config" value="$(arg thrust_config)"/>
+    </include>
+
+    <include file="$(find usv_waypoints)/launch/waypoint_follower.launch"/>
+
+</launch>

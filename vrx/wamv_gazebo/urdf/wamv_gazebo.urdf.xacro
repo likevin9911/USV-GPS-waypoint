@@ -8,7 +8,7 @@
   <xacro:arg name="gps_enabled" default="false" />
   <xacro:arg name="imu_enabled" default="false" />
   <xacro:arg name="lidar_enabled" default="false" />
-  <xacro:arg name="ground_truth_enabled" default="true" />
+  <xacro:arg name="ground_truth_enabled" default="false" />
   <xacro:arg name="vrx_sensors_enabled" default="false" />
   <xacro:arg name="pinger_enabled" default="false" />
   <xacro:arg name="ball_shooter_enabled" default="false" />
@@ -170,10 +170,6 @@
 
       <!-- Add pinger -->
       <xacro:wamv_pinger name="pinger" position="1.0 0 -1.0" />
-      
-      <xacro:wamv_p3d name="p3d_wamv" />
- 
-
       
       <!-- Add ball shooter (default pitch angle: ~-60 deg) -->
       <xacro:wamv_ball_shooter name="ball_shooter" x="0.54" y="0.30" z="1.296" pitch="-1.04"/>

@@ -1,0 +1,11 @@
+62waypoints:
+  - nav_type: 1
+    pose:
+      position:
+        x: 133.69
+        y: 62.592
+
+    station_duration: 0
+speed: 5.0
+
+
